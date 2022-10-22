@@ -6,7 +6,34 @@
     <link rel="stylesheet" href="styles.css">    
     <link rel="stylesheet" href="styles1.css">    
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-    <script src="pleaserotate.js"></script>
+    <style>
+    #pleaserotate-graphic{
+        fill: #fff;
+    }
+
+    #pleaserotate-backdrop {
+        color: #fff;
+        background-color: #000;
+    }
+    </style>
+
+    <script>
+	var portrait = window.innerWidth < window.innerHeight;
+	var PleaseRotateOptions = {
+		onlyMobile: false,
+		forcePortrait: !portrait,
+		startOnPageLoad: true,
+		onHide: function() {},
+		onShow: function() {},
+		forcePortrait: false,
+		message: "Please Rotate Your Device",
+		subMessage: "(or click to continue)",
+		allowClickBypass: true,
+		zIndex: 1000,
+		iconNode: null
+	}
+     </script>
+     <script src="https://www.robscanlon.com/pleaserotate/pleaserotate.min.js"></script>
 </head>
 <body>
 
